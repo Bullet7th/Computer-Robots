@@ -34,6 +34,7 @@ class mail:
     def send(self):
         if self.send_mail(mailto_list, '教务' + time.ctime()[0:11] + time.ctime()[20:], '\n'.join(stories)):
             print u"SEND SUCCESSFULLY"
+            stories = []
         else:
             print u"FAILED SEND"
 
